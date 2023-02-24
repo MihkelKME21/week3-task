@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'roboto', sans-serif;
+    color: #151515;
+}
+
+.movie-card {
+    margin-top: 5rem;
+    height: 800px;
+    text-align: center;
+}
+
+.movie-title {
+    text-transform: uppercase;
+}
+
+.movie-poster-container img {
+    opacity: 0;
+    margin-top: 2rem;
+    height: 500pix;
+    border-radius:2%;
+    transition: 1s;
+    /*Animation*/
+    animation: fade-in 2s ease-in-out forwards;
+    animation-delay: 0.4s;
+    cursor: pointer;
+}
+
+@keyframes fade-in {
+    100% {opacity: 1;}
+}
+/*Hover lisatud pildile*/
+.movie-poster-container img:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px -6px rgb(0, 0, 0);
+}
+
+.movie-rating {
+    display: inline-block;
+    border: 1px solid #151515;
+    padding: 0.2rem;
+    border-radius: 5px;
+}
+
+.movie-duration {
+    margin-left: 1rem;
+    letter-spacing: 0.2rem;
+}
+
+.movie-duration:before {
+    content: "\2022";
+}
+
+.movie-info-quote {
+    color: #151515;
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.movie-info-overview-title {
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+}
+
+.movie-info-actions {
+    /*Add animation*/
+    position: relative;
+    bottom: -30rem;
+    font-size:1.1rem;
+    animation: slide-from-bottom 2s ease-in-out forwards;
+}
+
+@keyframes slide-from-bottom {
+    100% {bottom: 0;}
+    80% {bottom: 1rem;}
+}
+
+.movie-info-actions ul {
+    list-style: none;
+}
+
+.movie-info-actions ul li {
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: rgb(3, 37, 65);
+    
+}
+
+.movie-info-actions ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    color: #777;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer ul li {
+    display: inline-block;
+    margin-top: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+}
+
+footer ul li a {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #777;
+}
